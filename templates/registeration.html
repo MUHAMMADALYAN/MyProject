@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registeration</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<form action="register" method="post" >
+        {% csrf_token %}
+         First name: <input type = "text" name = "first_name" /><br>
+         Last name: <input type = "text" name = "last_name" /><br>
+         User name: <input type = "text" name = "user" /><br>
+         Phone Number: <input type = "text" name = "phone" /><br>
+         Email: <input type = "text" name = "email" /><br>
+         Password : <input type = "password" name = "password1" /><br>
+         Confirm Password : <input type = "password" name = "password2" /><br>
+
+         Submit:<input type="submit" /><br>
+    <!--- whwn u click submit then action which is register is called-->
+
+      </form>
+
+<div>
+    {% for mess in messages %}
+        <!---  we used this 2 parenthesis  jinja tag in htnml file while {'title':Weding} is used in views file-->
+    <h3> {{ mess }}</h3>
+    {% endfor %}
+</div>
+</body>
+</html>
+
+</body>
+</html>
